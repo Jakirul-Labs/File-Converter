@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#635bff" />
+  <meta name="description" content="Convertly — convert, compress and create files right in your browser." />
+  <title>Convertly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Convertly home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 17a16 16 0 0 1 27-5l3 3"/><path d="M39 8v8h-8M39 31a16 16 0 0 1-27 5l-3-3"/><path d="M9 40v-8h8"/></svg></span>
+      <span class="brand-copy"><strong>Convertly</strong><small>Convert. Compress. Create.</small></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home"><span class="home-icon">⌂</span> Home</a>
+      <div class="nav-dropdown-wrap">
+        <button class="nav-link" id="toolsMenuButton" aria-expanded="false">Tools <span class="chevron">⌄</span></button>
+        <div class="dropdown" id="toolsDropdown">
+          <a href="#image-tools">Image Tools</a><a href="#pdf-tools">PDF Tools</a><a href="#qr-tools">QR Tools</a>
+        </div>
+      </div>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><span class="sun">☼</span><span class="toggle-knob">☾</span></button>
+    </div>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="bolt">ϟ</span> All-in-One Utility Toolkit</div>
+        <h1>Convert files<br /><span>effortlessly.</span></h1>
+        <p class="hero-description">A powerful collection of online tools to convert, compress and create files — all in one place.</p>
+        <div class="hero-points"><span><b>✓</b> 100% Free</span><span><b>✓</b> No Upload Limit</span><span><b>✓</b> Your Files Stay Private</span></div>
+      </div>
+      <div class="upload-box" id="dropZone">
+        <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" multiple hidden />
+        <div class="upload-icon"><svg viewBox="0 0 48 48"><path d="M14 34H11a8 8 0 0 1 0-16 13 13 0 0 1 25 4 7 7 0 0 1 1 12h-5"/><path d="M24 39V23m-7 7 7-7 7 7"/></svg></div>
+        <strong>Drop your files here</strong><span>or browse files from your device</span>
+        <button class="primary-button" id="chooseFiles"><span>▰</span> Choose Files</button>
+        <small>Supported: JPG, PNG, WebP, PDF, DOCX, etc.</small>
+      </div>
+      <div class="hero-decoration decoration-left"></div><div class="hero-decoration decoration-right"></div>
+      <div class="upload-spark" aria-hidden="true">╱ ╱ ╱</div>
+      <div class="curved-arrow" aria-hidden="true">↙</div>
+    </section>
+
+
+    <section class="tools-section container" id="tools">
+      <div class="section-heading"><span></span><div><h2>Our Powerful Tools</h2><p>Everything you need, in one place</p></div><span></span></div>
+      <div class="tool-grid" id="image-tools">
+        <button class="tool-card" data-tool="Image Converter"><span class="tool-icon blue-bg"><svg viewBox="0 0 48 48"><rect x="7" y="7" width="34" height="34" rx="5"/><circle cx="17" cy="18" r="3"/><path d="m9 34 11-12 8 8 5-5 7 9"/></svg></span><span class="tool-info"><strong>Image Converter</strong><small>Convert between PNG, JPG, WebP, etc.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="Image Compressor"><span class="tool-icon green-bg"><svg viewBox="0 0 48 48"><path d="M17 7H7v10m0-10 12 12M31 7h10v10m0-10L29 19M7 31v10h10M7 41l12-12m22 2v10H31m10 0L29 29"/></svg></span><span class="tool-info"><strong>Image Compressor</strong><small>Reduce image file size.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="Image Resizer"><span class="tool-icon orange-bg"><svg viewBox="0 0 48 48"><path d="M10 32V10h22M38 16v22H16M8 40l31-31"/><path d="m8 31 7 1-1-7M40 17l-7-1 1 7"/></svg></span><span class="tool-info"><strong>Image Resizer</strong><small>Change dimensions with ease.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="Image to PDF"><span class="tool-icon red-bg"><svg viewBox="0 0 48 48"><path d="M12 5h17l8 8v30H12zM29 5v9h8M17 27h18M17 32h18M17 37h12"/><text x="15" y="23" font-size="8" fill="currentColor" stroke="none">PDF</text></svg></span><span class="tool-info"><strong>Image → PDF</strong><small>Create PDF from images.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="Batch Converter"><span class="tool-icon purple-bg"><svg viewBox="0 0 48 48"><path d="m24 6 18 9-18 9L6 15zM6 23l18 9 18-9M6 31l18 9 18-9"/></svg></span><span class="tool-info"><strong>Batch Converter</strong><small>Convert multiple files at once.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="Word to PDF" id="pdf-tools"><span class="tool-icon blue-bg word-icon">W</span><span class="tool-info"><strong>Word → PDF</strong><small>Convert Word documents.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="PDF to Text"><span class="tool-icon teal-bg text-icon">T</span><span class="tool-info"><strong>PDF → Text</strong><small>Extract text from PDF.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="PDF to Image"><span class="tool-icon orange-bg"><svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="4"/><path d="m12 33 10-11 7 7 4-4 5 7M17 17h.1"/></svg></span><span class="tool-info"><strong>PDF → Image</strong><small>Export PDF pages as images.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="QR Generator" id="qr-tools"><span class="tool-icon green-bg qr-icon"><svg viewBox="0 0 48 48"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><rect x="29" y="5" width="14" height="14" rx="2"/><rect x="33" y="9" width="6" height="6"/><rect x="5" y="29" width="14" height="14" rx="2"/><rect x="9" y="33" width="6" height="6"/><path d="M25 25h5v5h-5zM35 25h8v5h-8zM25 35h5v8h-5zM35 35h4v4h-4zM41 41h2"/></svg></span><span class="tool-info"><strong>QR Generator</strong><small>Generate QR codes for links, text &amp; more.</small></span><span class="arrow">→</span></button>
+        <button class="tool-card" data-tool="QR Scanner"><span class="tool-icon blue-bg scan-icon"><svg viewBox="0 0 48 48"><path d="M7 18V7h11M30 7h11v11M41 30v11H30M18 41H7V30"/><path d="m16 24 6 6 11-12"/></svg></span><span class="tool-info"><strong>QR Scanner</strong><small>Scan QR codes from image or camera.</small></span><span class="arrow">→</span></button>
+      </div>
+    </section>
+
+    <section class="privacy-banner container" id="about"><span class="shield">✓</span><p><strong>Your privacy matters.</strong> All processing happens in your browser — no files are uploaded to our servers.</p><a href="#faq">Learn More <span>→</span></a></section>
+  </main>
+
+  <footer class="footer" id="faq"><div class="footer-brand"><span class="brand-mark small"><svg viewBox="0 0 48 48"><path d="M9 17a16 16 0 0 1 27-5l3 3M39 8v8h-8M39 31a16 16 0 0 1-27 5l-3-3M9 40v-8h8"/></svg></span><div><strong>Convertly</strong><small>Convert. Compress. Create.</small></div></div><div class="footer-links"><a href="#about">Privacy Policy</a><a href="#faq">Terms of Service</a><a href="#faq">FAQ</a><a href="#home">Contact</a></div><p class="made">Made with <span>♥</span> for developers &amp; users</p></footer>
+
+
+  <div class="tool-modal" id="imageConverterModal" aria-hidden="true">
+    <section class="converter-panel" role="dialog" aria-modal="true" aria-labelledby="converterTitle">
+      <div class="converter-header">
+        <div><span class="modal-kicker">IMAGE TOOLS</span><h2 id="converterTitle">Image Converter</h2><p>Convert PNG, JPG and WebP images right in your browser.</p></div>
+        <button class="modal-close" id="closeConverter" aria-label="Close converter">×</button>
+      </div>
+      <div class="converter-controls">
+        <label class="format-label" for="outputFormat">Convert to</label>
+        <select id="outputFormat" class="format-select">
+          <option value="image/png">PNG</option>
+          <option value="image/jpeg" selected>JPG</option>
+          <option value="image/webp">WebP</option>
+        </select>
+        <label class="quality-control" id="qualityControl">Quality <input id="outputQuality" type="range" min="40" max="100" value="90"><output id="qualityValue">90%</output></label>
+      </div>
+      <div class="converter-dropzone" id="converterDropzone" tabindex="0" role="button" aria-label="Choose images to convert">
+        <input type="file" id="converterFiles" accept="image/png,image/jpeg,image/webp" multiple hidden>
+        <span class="converter-upload-icon">↑</span><strong>Drop images here</strong><span>or click to browse · PNG, JPG, WebP</span>
+        <button type="button" class="secondary-button" id="addImagesButton">Choose Images</button>
+      </div>
+      <div class="file-list-heading"><strong id="fileCount">No images selected</strong><button type="button" class="text-button" id="clearImages" disabled>Clear all</button></div>
+      <div class="conversion-list" id="conversionList"><div class="empty-files">Your selected images will appear here.</div></div>
+      <div class="converter-footer">
+        <span class="privacy-note">🔒 Files stay on your device.</span>
+        <button type="button" class="primary-button convert-button" id="convertImages" disabled>Convert Images</button>
+      </div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
