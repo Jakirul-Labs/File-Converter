@@ -55,7 +55,9 @@ Convertly is designed with privacy in mind. File processing is primarily handled
 [Visit Convertly]
 
 Made with ❤️ for developers & users.
+
 **Convertly — Convert files effortlessly.**
+
 
 ## 👨‍💻 Developer
 
