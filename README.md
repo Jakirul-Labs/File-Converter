@@ -31,7 +31,7 @@ To run the project locally:
 1. Clone the repository:
 
    ```bash
-   git clone 
+   https://github.com/Jakirul-Labs/File-Converter
    ```
 
 2. Open the project folder.
@@ -54,12 +54,13 @@ Convertly is designed with privacy in mind. File processing is primarily handled
 
 [Visit Convertly]
 
+Made with ❤️ for developers & users.
+**Convertly — Convert files effortlessly.**
+
 ## 👨‍💻 Developer
 
 **Md. Jakirul Islam**
 
 ---
 
-Made with ❤️ for developers & users.
 
-**Convertly — Convert files effortlessly.**
